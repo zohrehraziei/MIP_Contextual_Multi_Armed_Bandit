@@ -1,11 +1,5 @@
 # ALN with Contextual Multi-Armed Bandit for Solving Mixed Integer Programming
 
-[![PyPI version](https://badge.fury.io/py/alns.svg)](https://badge.fury.io/py/alns)
-[![ALNS](https://github.com/N-Wouda/ALNS/actions/workflows/alns.yaml/badge.svg)](https://github.com/N-Wouda/ALNS/actions/workflows/alns.yaml)
-
-
-# ALNS with Contextual Multi-Armed Bandit for MIP using SCIP
-
 This repository contains an implementation that combines Adaptive Large Neighbourhood Search (ALNS) with a contextual multi-armed bandit (MAB) approach for solving Mixed Integer Programming (MIP) problems using SCIP. The ALNS component of this implementation is based on the work available in Niels Wouda's ALNS repository: [ALNS](https://github.com/N-Wouda/ALNS)
 
 
