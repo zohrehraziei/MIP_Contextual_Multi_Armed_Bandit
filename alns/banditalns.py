@@ -195,6 +195,6 @@ def run_banditalns(instance_path):
 
 
 if __name__ == "__main__":
-    instance_path = "C:/Users/a739095/Streamfolder/Forked_ALNS_CMAB_MIP/ALNS/data/gen-ip002.mps.gz"
+    instance_path = "C:/.../ALNS/data/gen-ip002.mps.gz"
     # Create MIP instance
     run_banditalns(instance_path)
