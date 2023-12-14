@@ -6,7 +6,8 @@
 
 # ALNS with Contextual Multi-Armed Bandit for MIP using SCIP
 
-This repository contains an implementation of Adaptive Large Neighbourhood Search (ALNS) combined with a contextual multi-armed bandit approach for solving Mixed Integer Programming (MIP) problems using the SCIP optimization suite.
+This repository contains an implementation that combines Adaptive Large Neighbourhood Search (ALNS) with a contextual multi-armed bandit (MAB) approach for solving Mixed Integer Programming (MIP) problems using SCIP. The ALNS component of this implementation is based on the work available in Niels Wouda's ALNS repository: [ALNS](https://github.com/N-Wouda/ALNS)
+
 
 ## Overview
 
@@ -15,7 +16,7 @@ The implementation employs ALNS, an iterative method for solving difficult optim
 ## Features
 
 - **[ALNS](https://github.com/N-Wouda/ALNS) Algorithm**: Adaptive search algorithm for optimizing MIP solutions.
-- **Contextual [MAB](https://github.com/P-bibs/ALNS)**: Dynamic operator selection based on learned performance and problem context.
+- **Contextual MAB**: Dynamic operator selection based on learned performance and problem context implemented on the top of ALNS (see [MAB](https://github.com/P-bibs/ALNS)).
 - **SCIP Integration**: Utilizes SCIP for solving MIP instances effectively.
 - **Customizable Operators**: Supports the addition of custom destroy and repair operators for ALNS.
 
