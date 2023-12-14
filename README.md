@@ -3,38 +3,40 @@
 [![PyPI version](https://badge.fury.io/py/alns.svg)](https://badge.fury.io/py/alns)
 [![ALNS](https://github.com/N-Wouda/ALNS/actions/workflows/alns.yaml/badge.svg)](https://github.com/N-Wouda/ALNS/actions/workflows/alns.yaml)
 
-``alns`` is a general, well-documented and tested implementation of the adaptive
-large neighbourhood search [ALNS](https://github.com/N-Wouda/ALNS) metaheuristic in Python. ALNS is an algorithm
-that can be used to solve difficult combinatorial optimisation problems. 
 
-`alns` depends only on `numpy` and `matplotlib`. It may be installed in the
-usual way as
+# ALNS with Contextual Multi-Armed Bandit for MIP using SCIP
 
-```
-pip install alns
-```
+This repository contains an implementation of Adaptive Large Neighbourhood Search (ALNS) combined with a contextual multi-armed bandit approach for solving Mixed Integer Programming (MIP) problems using the SCIP optimization suite.
 
-### How to cite `alns`
+## Overview
 
-If you use `alns` in your research, please consider citing the following paper:
+The implementation employs ALNS, an iterative method for solving difficult optimization problems, and enhances it with a contextual multi-armed bandit (MAB) strategy for dynamic operator selection. The MAB approach helps in adapting the selection of destroy and repair operators based on contextual information extracted from the MIP instances.
 
-> Wouda, N.A., and L. Lan (2023). 
-> ALNS: a Python implementation of the adaptive large neighbourhood search metaheuristic. 
-> _Journal of Open Source Software_, 8(81): 5028. 
-> https://doi.org/10.21105/joss.05028
+## Features
 
-Or, using the following BibTeX entry:
+- **[ALNS](https://github.com/N-Wouda/ALNS) Algorithm**: Adaptive search algorithm for optimizing MIP solutions.
+- **Contextual [MAB](https://github.com/P-bibs/ALNS)**: Dynamic operator selection based on learned performance and problem context.
+- **SCIP Integration**: Utilizes SCIP for solving MIP instances effectively.
+- **Customizable Operators**: Supports the addition of custom destroy and repair operators for ALNS.
 
-```bibtex
-@article{Wouda_Lan_ALNS_2023, 
-  doi = {10.21105/joss.05028}, 
-  url = {https://doi.org/10.21105/joss.05028}, 
-  year = {2023}, 
-  publisher = {The Open Journal}, 
-  volume = {8}, 
-  number = {81}, 
-  pages = {5028}, 
-  author = {Niels A. Wouda and Leon Lan}, 
-  title = {{ALNS}: a {P}ython implementation of the adaptive large neighbourhood search metaheuristic}, 
-  journal = {Journal of Open Source Software} 
-}
+## Requirements
+
+- Python 3.x
+- `numpy`
+- `pandas`
+- `pyscipopt` (Python interface for SCIP Optimization Suite)
+- `mabwiser` (for the multi-armed bandit algorithm)
+
+## Usage
+
+1. **Initialization**: Create a new ALNS instance and configure it with SCIP-based problem states.
+2. **Operator Setup**: Define and add custom destroy and repair operators to the ALNS instance.
+3. **Context Extraction**: Utilize the `ContextExtractor` class to extract features from MIP instances.
+4. **ALNS Iteration**: Run the ALNS algorithm with the configured operators and MAB selector.
+5. **Solution Retrieval**: Access the best solution found by the ALNS process.
+
+## Example
+
+```python
+instance_path = "path/to/mip_instance.mps"
+run_banditalns(instance_path)
